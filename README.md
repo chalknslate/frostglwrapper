@@ -6,9 +6,9 @@ Features:
 Class-like model initialization using the ModelDataInfo struct.
 An example of loading a model:
 ```
-//example.c
+//example1.c
 #include <stdio.h>
-#include "LoadedModel.h"
+#include "FrWrapper.h"
 int main(int argc, char*argv[])
 {
     initialize();
@@ -20,4 +20,20 @@ int main(int argc, char*argv[])
     return 0;
 }
 ```
-Handles uniforms and shaders wrapped into structs.
+Handles window creation.
+```
+//example2.c
+#include <stdio.h>
+#include "FrWrapper.h"
+int main(int argc, char*argv[])
+{
+    initialize();
+    struct Window window = Window.new();
+    window.setClearColor(&window, 255,0,0,255);
+    while(!window.getClose(&window))
+    {
+        window.clear(&window, GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    }
+    fr_exit();
+}
+```
