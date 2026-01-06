@@ -5,7 +5,7 @@ Features:
 
 Class-like model initialization using the ModelDataInfo struct.
 An example of loading a model:
-```
+```c
 //example1.c
 #include <stdio.h>
 #include "FrWrapper.h"
@@ -21,7 +21,7 @@ int main(int argc, char*argv[])
 }
 ```
 Handles window creation.
-```
+```c
 //example2.c
 #include <stdio.h>
 #include "FrWrapper.h"
